@@ -82,6 +82,7 @@ If you develop/use TeaCache in your projects, welcome to let us know.
 - [ComfyUI-TeaCacheHunyuanVideo](https://github.com/facok/ComfyUI-TeaCacheHunyuanVideo) for TeaCache4HunyuanVideo. Thanks [@facok](https://github.com/facok).
 - [ComfyUI-TeaCache](https://github.com/welltop-cn/ComfyUI-TeaCache) for TeaCache. Thanks [@YunjieYu](https://github.com/YunjieYu).
 - [Comfyui_TTP_Toolset](https://github.com/TTPlanetPig/Comfyui_TTP_Toolset) supports TeaCache. Thanks [@TTPlanetPig](https://github.com/TTPlanetPig).
+- [ComfyUI_Patches_ll](https://github.com/lldacing/ComfyUI_Patches_ll) supports TeaCache. Thanks [@lldacing](https://github.com/lldacing).
 
 
 ## TeaCache for HunyuanVideo
