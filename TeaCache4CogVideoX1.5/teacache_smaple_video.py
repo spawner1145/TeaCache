@@ -2,9 +2,9 @@ import argparse
 import torch
 import numpy as np
 from typing import Any, Dict, Optional, Tuple,  Union
-from videosys.models.transformers.cogvideox_transformer_3d import Transformer2DModelOutput
-from diffusers.utils import USE_PEFT_BACKEND, is_torch_version, scale_lora_layers, unscale_lora_layers, export_to_video
-from diffusers import CogVideoXPipeline
+from diffusers.models.modeling_outputs import Transformer2DModelOutput
+from diffusers.utils import USE_PEFT_BACKEND, is_torch_version, scale_lora_layers, unscale_lora_layers, export_to_video, load_image
+from diffusers import CogVideoXPipeline, CogVideoXImageToVideoPipeline
 
 
 def teacache_forward(
@@ -182,14 +182,26 @@ def teacache_forward(
 
 
 def main(args):
-    prompt = args.prompt
-    negative_prompt = args.negative_prompt
     seed = args.seed
     ckpts_path = args.ckpts_path
     output_path = args.output_path
     num_inference_steps = args.num_inference_steps
     rel_l1_thresh = args.rel_l1_thresh
-    pipe = CogVideoXPipeline.from_pretrained(ckpts_path, torch_dtype=torch.bfloat16)
+    generate_type = args.generate_type
+    prompt = args.prompt
+    negative_prompt = args.negative_prompt
+    height = args.height
+    width = args.width
+    num_frames = args.num_frames
+    guidance_scale = args.guidance_scale
+    fps = args.fps
+    image_path = args.image_path
+
+    if generate_type == "t2v":
+        pipe = CogVideoXPipeline.from_pretrained(ckpts_path, torch_dtype=torch.bfloat16)
+    else:
+        pipe = CogVideoXImageToVideoPipeline.from_pretrained(ckpts_path, torch_dtype=torch.bfloat16)
+        image = load_image(image=image_path)
 
     # TeaCache
     pipe.transformer.__class__.enable_teacache = True
@@ -206,32 +218,52 @@ def main(args):
     pipe.vae.enable_slicing()
     pipe.vae.enable_tiling()
 
-    video = pipe(
-        prompt=prompt,
-        negative_prompt=negative_prompt,
-        width=1360,
-        height=768,
-        num_frames=81,
-        use_dynamic_cfg=True,
-        guidance_scale=6,
-        num_inference_steps=num_inference_steps,
-        generator=torch.Generator("cuda").manual_seed(seed)
-    ).frames[0]
+    if generate_type == "t2v":
+        video = pipe(
+            prompt=prompt,
+            negative_prompt=negative_prompt,
+            width=width,
+            height=height,
+            num_frames=num_frames,
+            use_dynamic_cfg=True,
+            guidance_scale=guidance_scale,
+            num_inference_steps=num_inference_steps,
+            generator=torch.Generator("cuda").manual_seed(seed)
+        ).frames[0]
+    else:
+        video = pipe(
+            height=height,
+            width=width,
+            prompt=prompt,
+            image=image,
+            num_inference_steps=num_inference_steps,  # Number of inference steps
+            num_frames=num_frames,  # Number of frames to generate
+            use_dynamic_cfg=True,  # This id used for DPM scheduler, for DDIM scheduler, it should be False
+            guidance_scale=guidance_scale,
+            generator=torch.Generator("cuda").manual_seed(seed),  # Set the seed for reproducibility
+        ).frames[0]
     words = prompt.split()[:5]
     video_path = f"{output_path}/teacache_cogvideox1.5-5B_{words}.mp4"
-    export_to_video(video, video_path, fps=16)
+    export_to_video(video, video_path, fps=fps)
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Run CogvideoX1.5-5B with given parameters")
+    parser = argparse.ArgumentParser(description="Run CogVideoX1.5-5B with given parameters")
     
     parser.add_argument('--seed', type=int, default=42, help='Random seed')
     parser.add_argument('--num_inference_steps', type=int, default=50, help='Number of inference steps')
     parser.add_argument("--output_path", type=str, default="./teacache_results", help="The path where the generated video will be saved")
-    parser.add_argument('--ckpts_path', type=str, default="/data-123/zishen/cvproject/CogVideo/THUDM/CogVideoX1.5-5B", help='Path to checkpoint')
+    parser.add_argument('--ckpts_path', type=str, default="/data-123/zishen/cvproject/CogVideo/THUDM/CogVideoX1.5-5B", help='Path to checkpoint, t2v->THUDM/CogVideoX1.5-5B, i2v->THUDM/CogVideoX1.5-5B-I2V')
     parser.add_argument('--rel_l1_thresh', type=float, default=0.2, help='Higher speedup will cause to worse quality -- 0.1 for 1.3x speedup -- 0.2 for 1.8x speedup -- 0.3 for 2.1x speedup')
     parser.add_argument('--prompt', type=str, default="A clear, turquoise river flows through a rocky canyon, cascading over a small waterfall and forming a pool of water at the bottom.The river is the main focus of the scene, with its clear water reflecting the surrounding trees and rocks. The canyon walls are steep and rocky, with some vegetation growing on them. The trees are mostly pine trees, with their green needles contrasting with the brown and gray rocks. The overall tone of the scene is one of peace and tranquility.", help='Description of the video for the model to generate')
     parser.add_argument('--negative_prompt', type=str, default=None, help='Description of unwanted situations in model generated videos')
+    parser.add_argument("--image_path",type=str,default=None,help="The path of the image to be used as the background of the video")
+    parser.add_argument("--generate_type", type=str, default="t2v", help="The type of video generation (e.g., 't2v', 'i2v')")
+    parser.add_argument("--width", type=int, default=1360, help="Number of steps for the inference process")
+    parser.add_argument("--height", type=int, default=768, help="Number of steps for the inference process")
+    parser.add_argument("--num_frames", type=int, default=81, help="Number of steps for the inference process")
+    parser.add_argument("--guidance_scale", type=float, default=6.0, help="The scale for classifier-free guidance")
+    parser.add_argument("--fps", type=int, default=16, help="Number of steps for the inference process")
     args = parser.parse_args()
 
     main(args)
