@@ -27,7 +27,7 @@ pip install --upgrade diffusers[torch] transformers protobuf tokenizers sentence
 
 You can modify the `rel_l1_thresh` to obtain your desired trade-off between latency and visul quality, and change the `ckpts_path`, `prompt`, `image_path` to customize your identity-preserving video.
 
-For T2v inference, you can use the following command:
+For T2V inference, you can use the following command:
 
 ```bash
 cd TeaCache4CogVideoX1.5
@@ -41,7 +41,7 @@ python3 teacache_sample_video.py \
     --output_path ./teacache_results
 ```
 
-For I2v inference, you can use the following command:
+For I2V inference, you can use the following command:
 
 ```bash
 cd TeaCache4CogVideoX1.5
