@@ -66,6 +66,7 @@ We introduce Timestep Embedding Aware Cache (TeaCache), a training-free caching 
 
 ## Latest News 🔥
 **Welcome for PRs to support other models. Please star ⭐ our project and stay tuned.**
+- [2025/01/20] 🔥 Support [CogVideoX1.5-5B](https://github.com/THUDM/CogVideo) for both T2V and I2V. Thanks [@zishen-ucap](https://github.com/zishen-ucap).  Rescaling coefficients for CogVideoX-5B can be directly applied to CogVideoX1.5-5B.
 - [2025/01/07] 🔥 Support [TangoFlux](https://github.com/declare-lab/TangoFlux). TeaCache works well for Audio Diffusion Models! Rescaling coefficients for FLUX can be directly applied to TangoFlux.
 - [2024/12/30] 🔥 Support [Mochi](https://github.com/genmoai/mochi) and [LTX-Video](https://github.com/Lightricks/LTX-Video) for Video Diffusion Models. Support [Lumina-T2X](https://github.com/Alpha-VLLM/Lumina-T2X) for Image Diffusion Models.
 - [2024/12/27] 🔥 Support [FLUX](https://github.com/black-forest-labs/flux). TeaCache works well for Image Diffusion Models!
@@ -107,6 +108,9 @@ Please refer to [TeaCache4Lumina-T2X](./TeaCache4Lumina-T2X/README.md).
 
 ## TeaCache for TangoFlux
 Please refer to [TeaCache4TangoFlux](./TeaCache4TangoFlux/README.md).
+
+## TeaCache for TeaCache4CogVideoX1.5
+Please refer to [TeaCache4CogVideoX1.5](./TeaCache4CogVideoX1.5/README.md).
 
 ## Installation
 
