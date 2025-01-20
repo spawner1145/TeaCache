@@ -97,6 +97,7 @@ If you develop/use TeaCache in your projects, welcome to let us know.
 - [TeaCache4Open-Sora](./eval/teacache/README.md)
 - [TeaCache4Open-Sora-Plan](./eval/teacache/README.md)
 - [TeaCache4Latte](./eval/teacache/README.md)
+- [TeaCache4CogVideoX](https://github.com/THUDM/CogVideo)
 - [TeaCache4HunyuanVideo](./TeaCache4HunyuanVideo/README.md)
 - [TeaCache4Mochi](./TeaCache4Mochi/README.md)
 - [TeaCache4LTX-Video](./TeaCache4LTX-Video/README.md)
