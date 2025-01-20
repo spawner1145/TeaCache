@@ -65,12 +65,11 @@
 We introduce Timestep Embedding Aware Cache (TeaCache), a training-free caching approach that estimates and leverages the fluctuating differences among model outputs across timesteps, thereby accelerating the inference. TeaCache works well for Video Diffusion Models, Image Diffusion models and Audio Diffusion Models. For more details and results, please visit our [project page](https://github.com/LiewFeng/TeaCache).
 
 ## Latest News 🔥
-**Welcome for PRs to support other models. Please star ⭐ our project and stay tuned.**
-- [2025/01/20] 🔥 Support [CogVideoX1.5-5B](https://github.com/THUDM/CogVideo) for both T2V and I2V. Thanks [@zishen-ucap](https://github.com/zishen-ucap).  Rescaling coefficients for CogVideoX-5B can be directly applied to CogVideoX1.5-5B.
-- [2025/01/07] 🔥 Support [TangoFlux](https://github.com/declare-lab/TangoFlux). TeaCache works well for Audio Diffusion Models! Rescaling coefficients for FLUX can be directly applied to TangoFlux.
+- [2025/01/20] 🔥 Support [CogVideoX1.5-5B](https://github.com/THUDM/CogVideo) for both T2V and I2V. Thanks [@zishen-ucap](https://github.com/zishen-ucap). 
+- [2025/01/07] 🔥 Support [TangoFlux](https://github.com/declare-lab/TangoFlux). TeaCache works well for Audio Diffusion Models!
 - [2024/12/30] 🔥 Support [Mochi](https://github.com/genmoai/mochi) and [LTX-Video](https://github.com/Lightricks/LTX-Video) for Video Diffusion Models. Support [Lumina-T2X](https://github.com/Alpha-VLLM/Lumina-T2X) for Image Diffusion Models.
 - [2024/12/27] 🔥 Support [FLUX](https://github.com/black-forest-labs/flux). TeaCache works well for Image Diffusion Models!
-- [2024/12/26] 🔥 Support [ConsisID](https://github.com/PKU-YuanGroup/ConsisID). Thanks [@SHYuanBest](https://github.com/SHYuanBest). Rescaling coefficients for CogVideoX can be directly applied to ConsisID.
+- [2024/12/26] 🔥 Support [ConsisID](https://github.com/PKU-YuanGroup/ConsisID). Thanks [@SHYuanBest](https://github.com/SHYuanBest). 
 - [2024/12/24] 🔥 Support [HunyuanVideo](https://github.com/Tencent/HunyuanVideo).
 - [2024/12/19] 🔥 Support [CogVideoX](https://github.com/THUDM/CogVideo).
 - [2024/12/06] 🎉 Release the [code](https://github.com/LiewFeng/TeaCache) of TeaCache. Support [Open-Sora](https://github.com/hpcaitech/Open-Sora), [Open-Sora-Plan](https://github.com/PKU-YuanGroup/Open-Sora-Plan) and [Latte](https://github.com/Vchitect/Latte).
@@ -87,7 +86,12 @@ If you develop/use TeaCache in your projects, welcome to let us know.
 - [Ruyi-Models](https://github.com/IamCreateAI/Ruyi-Models) supports TeaCache. Thanks [@cellzero](https://github.com/cellzero).
 - [ComfyUI-TangoFlux](https://github.com/LucipherDev/ComfyUI-TangoFlux) supports TeaCache. Thanks [@LucipherDev](https://github.com/LucipherDev).
 
+## Instruction for Supporting Other Models 🤖
+- **Welcome for PRs to support other models.**
+- If the custom model is based on or has similar model structure to the models we've supported, you can try to directly transfer TeaCache to the custom model. For example,  rescaling coefficients for CogVideoX-5B can be directly applied to CogVideoX1.5, ConsisID and rescaling coefficients for FLUX can be directly applied to TangoFlux.
+- Otherwise, you can refer to these successful attempts, e.g., [1](https://github.com/ali-vilab/TeaCache/issues/20), [2](https://github.com/ali-vilab/TeaCache/issues/18).
 
+  
 ## TeaCache for HunyuanVideo
 Please refer to [TeaCache4HunyuanVideo](./TeaCache4HunyuanVideo/README.md).
 
@@ -111,6 +115,10 @@ Please refer to [TeaCache4TangoFlux](./TeaCache4TangoFlux/README.md).
 
 ## TeaCache for TeaCache4CogVideoX1.5
 Please refer to [TeaCache4CogVideoX1.5](./TeaCache4CogVideoX1.5/README.md).
+
+
+
+
 
 ## Installation
 
@@ -178,7 +186,7 @@ This repository is built based on [VideoSys](https://github.com/NUS-HPC-AI-Lab/V
 * The service is a research preview. Please contact us if you find any potential violations. (liufeng20@mails.ucas.ac.cn)
 
 ## Citation
-If you find TeaCache is useful in your research or applications, please consider giving us a star 🌟 and citing it by the following BibTeX entry.
+If you find TeaCache is useful in your research or applications, please consider giving us a star ⭐ and citing it by the following BibTeX entry.
 
 ```
 @article{liu2024timestep,
