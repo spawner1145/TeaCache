@@ -92,89 +92,29 @@ If you develop/use TeaCache in your projects, welcome to let us know.
 - Otherwise, you can refer to these successful attempts, e.g., [1](https://github.com/ali-vilab/TeaCache/issues/20), [2](https://github.com/ali-vilab/TeaCache/issues/18).
 
   
-## TeaCache for HunyuanVideo
-Please refer to [TeaCache4HunyuanVideo](./TeaCache4HunyuanVideo/README.md).
+## Supported Models
+**Text to Video**
+- [TeaCache4Open-Sora](./eval/teacache/README.md)
+- [TeaCache4Open-Sora-Plan](./eval/teacache/README.md)
+- [TeaCache4Latte](./eval/teacache/README.md)
+- [TeaCache4HunyuanVideo](./TeaCache4HunyuanVideo/README.md)
+- [TeaCache4Mochi](./TeaCache4Mochi/README.md)
+- [TeaCache4LTX-Video](./TeaCache4LTX-Video/README.md)
+- [TeaCache4CogVideoX1.5](./TeaCache4CogVideoX1.5/README.md)
 
-## TeaCache for ConsisID
-Please refer to [TeaCache4ConsisID](./TeaCache4ConsisID/README.md).
+ **Image to Video** 
+- [TeaCache4ConsisID](./TeaCache4ConsisID/README.md)
+- [TeaCache4CogVideoX1.5](./TeaCache4CogVideoX1.5/README.md)
+- Ruyi-Models. See [here](https://github.com/IamCreateAI/Ruyi-Models).
 
-## TeaCache for FLUX
-Please refer to [TeaCache4FLUX](./TeaCache4FLUX/README.md).
+ **Text to Image**
+- [TeaCache4FLUX](./TeaCache4FLUX/README.md)
+- [TeaCache4Lumina-T2X](./TeaCache4Lumina-T2X/README.md)
 
-## TeaCache for Mochi
-Please refer to [TeaCache4Mochi](./TeaCache4Mochi/README.md).
-
-## TeaCache for LTX-Video
-Please refer to [TeaCache4LTX-Video](./TeaCache4LTX-Video/README.md).
-
-## TeaCache for Lumina-T2X
-Please refer to [TeaCache4Lumina-T2X](./TeaCache4Lumina-T2X/README.md).
-
-## TeaCache for TangoFlux
-Please refer to [TeaCache4TangoFlux](./TeaCache4TangoFlux/README.md).
-
-## TeaCache for TeaCache4CogVideoX1.5
-Please refer to [TeaCache4CogVideoX1.5](./TeaCache4CogVideoX1.5/README.md).
+ **Text to Audio**
+- [TeaCache4TangoFlux](./TeaCache4TangoFlux/README.md)
 
 
-
-
-
-## Installation
-
-Prerequisites:
-
-- Python >= 3.10
-- PyTorch >= 1.13 (We recommend to use a >2.0 version)
-- CUDA >= 11.6
-
-We strongly recommend using Anaconda to create a new environment (Python >= 3.10) to run our examples:
-
-```shell
-conda create -n teacache python=3.10 -y
-conda activate teacache
-```
-
-Install TeaCache:
-
-```shell
-git clone https://github.com/LiewFeng/TeaCache
-cd TeaCache
-pip install -e .
-```
-
-
-## Evaluation of TeaCache
-
-We first generate videos according to VBench's prompts.
-
-And then calculate Vbench, PSNR, LPIPS and SSIM based on the video generated.
-
-1. Generate video
-```
-cd eval/teacache
-python experiments/latte.py
-python experiments/opensora.py
-python experiments/open_sora_plan.py
-python experiments/cogvideox.py
-```
-
-2. Calculate Vbench score
-```
-# vbench is calculated independently
-# get scores for all metrics
-python vbench/run_vbench.py --video_path aaa --save_path bbb
-# calculate final score
-python vbench/cal_vbench.py --score_dir bbb
-```
-
-3. Calculate other metrics
-```
-# these metrics are calculated compared with original model
-# gt video is the video of original model
-# generated video is our methods's results
-python common_metrics/eval.py --gt_video_dir aa --generated_video_dir bb
-```
 ## Acknowledgement
 
 This repository is built based on [VideoSys](https://github.com/NUS-HPC-AI-Lab/VideoSys), [Diffusers](https://github.com/huggingface/diffusers), [Open-Sora](https://github.com/hpcaitech/Open-Sora), [Open-Sora-Plan](https://github.com/PKU-YuanGroup/Open-Sora-Plan), [Latte](https://github.com/Vchitect/Latte), [CogVideoX](https://github.com/THUDM/CogVideo), [HunyuanVideo](https://github.com/Tencent/HunyuanVideo), [ConsisID](https://github.com/PKU-YuanGroup/ConsisID), [FLUX](https://github.com/black-forest-labs/flux), [Mochi](https://github.com/genmoai/mochi), [LTX-Video](https://github.com/Lightricks/LTX-Video), [Lumina-T2X](https://github.com/Alpha-VLLM/Lumina-T2X) and [TangoFlux](https://github.com/declare-lab/TangoFlux). Thanks for their contributions!
