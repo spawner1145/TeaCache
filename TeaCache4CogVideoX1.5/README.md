@@ -35,7 +35,7 @@ cd TeaCache4CogVideoX1.5
 python3 teacache_sample_video.py \
     --rel_l1_thresh 0.2 \
     --ckpts_path THUDM/CogVideoX1.5-5B \
-    --prompt "A clear, turquoise river flows through a rocky canyon, cascading over a small waterfall and forming a pool of water at the bottom.The river is the main focus of the scene, with its clear water reflecting the surrounding trees and rocks. The canyon walls are steep and rocky, with some vegetation growing on them. The trees are mostly pine trees, with their green needles contrasting with the brown and gray rocks. The overall tone of the scene is one of peace and tranquility.", help='Description of the video for the model to generate." \
+    --prompt "A clear, turquoise river flows through a rocky canyon, cascading over a small waterfall and forming a pool of water at the bottom. The river is the main focus of the scene, with its clear water reflecting the surrounding trees and rocks. The canyon walls are steep and rocky, with some vegetation growing on them. The trees are mostly pine trees, with their green needles contrasting with the brown and gray rocks. The overall tone of the scene is one of peace and tranquility." \
     --seed 42 \
     --num_inference_steps 50 \
     --output_path ./teacache_results
