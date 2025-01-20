@@ -59,10 +59,10 @@
 
 ![visualization](./assets/tisser.png)
 
-## Introduction 🫖
+## 🫖 Introduction 
 We introduce Timestep Embedding Aware Cache (TeaCache), a training-free caching approach that estimates and leverages the fluctuating differences among model outputs across timesteps, thereby accelerating the inference. TeaCache works well for Video Diffusion Models, Image Diffusion models and Audio Diffusion Models. For more details and results, please visit our [project page](https://github.com/LiewFeng/TeaCache).
 
-## Latest News 🔥
+## 🔥 Latest News 
 - **If you like our project, please give us a star ⭐ on GitHub for the latest update.**
 - [2025/01/20] 🔥 Support [CogVideoX1.5-5B](https://github.com/THUDM/CogVideo) for both T2V and I2V. Thanks [@zishen-ucap](https://github.com/zishen-ucap). 
 - [2025/01/07] 🔥 Support [TangoFlux](https://github.com/declare-lab/TangoFlux). TeaCache works well for Audio Diffusion Models!
@@ -74,7 +74,7 @@ We introduce Timestep Embedding Aware Cache (TeaCache), a training-free caching 
 - [2024/12/06] 🎉 Release the [code](https://github.com/LiewFeng/TeaCache) of TeaCache. Support [Open-Sora](https://github.com/hpcaitech/Open-Sora), [Open-Sora-Plan](https://github.com/PKU-YuanGroup/Open-Sora-Plan) and [Latte](https://github.com/Vchitect/Latte).
 - [2024/11/28] 🎉 Release the [paper](https://arxiv.org/abs/2411.19108) of TeaCache.
 
-## Community Contributions 🧩 
+## 🧩 Community Contributions  
 If you develop/use TeaCache in your projects, welcome to let us know.
 - [ConsisID](https://github.com/PKU-YuanGroup/ConsisID) supports TeaCache. Thanks [@SHYuanBest](https://github.com/SHYuanBest).
 - [ComfyUI-HunyuanVideoWrapper](https://github.com/kijai/ComfyUI-HunyuanVideoWrapper) supports TeaCache4HunyuanVideo. Thanks [@kijai](https://github.com/kijai), [ctf05](https://github.com/ctf05) and [DarioFT](https://github.com/DarioFT).
@@ -86,7 +86,7 @@ If you develop/use TeaCache in your projects, welcome to let us know.
 - [ComfyUI-TangoFlux](https://github.com/LucipherDev/ComfyUI-TangoFlux) supports TeaCache. Thanks [@LucipherDev](https://github.com/LucipherDev).
 
   
-## Supported Models 🎉
+## 🎉 Supported Models 
 **Text to Video**
 - [TeaCache4Open-Sora](./eval/teacache/README.md)
 - [TeaCache4Open-Sora-Plan](./eval/teacache/README.md)
@@ -109,22 +109,22 @@ If you develop/use TeaCache in your projects, welcome to let us know.
  **Text to Audio**
 - [TeaCache4TangoFlux](./TeaCache4TangoFlux/README.md)
 
-## Instructions for Supporting Other Models 🤖
+## 🤖 Instructions for Supporting Other Models 
 - **Welcome for PRs to support other models.**
 - If the custom model is based on or has similar model structure to the models we've supported, you can try to directly transfer TeaCache to the custom model. For example,  rescaling coefficients for CogVideoX-5B can be directly applied to CogVideoX1.5, ConsisID and rescaling coefficients for FLUX can be directly applied to TangoFlux.
 - Otherwise, you can refer to these successful attempts, e.g., [1](https://github.com/ali-vilab/TeaCache/issues/20), [2](https://github.com/ali-vilab/TeaCache/issues/18).
 
-## Acknowledgement 💐
+## 💐 Acknowledgement 
 
 This repository is built based on [VideoSys](https://github.com/NUS-HPC-AI-Lab/VideoSys), [Diffusers](https://github.com/huggingface/diffusers), [Open-Sora](https://github.com/hpcaitech/Open-Sora), [Open-Sora-Plan](https://github.com/PKU-YuanGroup/Open-Sora-Plan), [Latte](https://github.com/Vchitect/Latte), [CogVideoX](https://github.com/THUDM/CogVideo), [HunyuanVideo](https://github.com/Tencent/HunyuanVideo), [ConsisID](https://github.com/PKU-YuanGroup/ConsisID), [FLUX](https://github.com/black-forest-labs/flux), [Mochi](https://github.com/genmoai/mochi), [LTX-Video](https://github.com/Lightricks/LTX-Video), [Lumina-T2X](https://github.com/Alpha-VLLM/Lumina-T2X) and [TangoFlux](https://github.com/declare-lab/TangoFlux). Thanks for their contributions!
 
-## License 🔒
+## 🔒 License 
 
 * The majority of this project is released under the Apache 2.0 license as found in the [LICENSE](./LICENSE) file.
 * For [VideoSys](https://github.com/NUS-HPC-AI-Lab/VideoSys), [Diffusers](https://github.com/huggingface/diffusers), [Open-Sora](https://github.com/hpcaitech/Open-Sora), [Open-Sora-Plan](https://github.com/PKU-YuanGroup/Open-Sora-Plan), [Latte](https://github.com/Vchitect/Latte), [CogVideoX](https://github.com/THUDM/CogVideo), [HunyuanVideo](https://github.com/Tencent/HunyuanVideo), [ConsisID](https://github.com/PKU-YuanGroup/ConsisID), [FLUX](https://github.com/black-forest-labs/flux), [Mochi](https://github.com/genmoai/mochi), [LTX-Video](https://github.com/Lightricks/LTX-Video), [Lumina-T2X](https://github.com/Alpha-VLLM/Lumina-T2X), and [TangoFlux](https://github.com/declare-lab/TangoFlux), please follow their LICENSE.
 * The service is a research preview. Please contact us if you find any potential violations. (liufeng20@mails.ucas.ac.cn)
 
-## Citation 📖
+## 📖 Citation 
 If you find TeaCache is useful in your research or applications, please consider giving us a star ⭐ and citing it by the following BibTeX entry.
 
 ```
