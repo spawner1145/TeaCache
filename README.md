@@ -84,6 +84,7 @@ If you develop/use TeaCache in your projects, welcome to let us know.
 - [ComfyUI_Patches_ll](https://github.com/lldacing/ComfyUI_Patches_ll) supports TeaCache. Thanks [@lldacing](https://github.com/lldacing).
 - [Ruyi-Models](https://github.com/IamCreateAI/Ruyi-Models) supports TeaCache. Thanks [@cellzero](https://github.com/cellzero).
 - [ComfyUI-TangoFlux](https://github.com/LucipherDev/ComfyUI-TangoFlux) supports TeaCache. Thanks [@LucipherDev](https://github.com/LucipherDev).
+- [EasyAnimate](https://github.com/aigc-apps/EasyAnimate) supports TeaCache. Thanks [@hkunzhe](https://github.com/hkunzhe) and [@bubbliiiing](https://github.com/bubbliiiing).
 
   
 ## 🎉 Supported Models 
@@ -96,11 +97,16 @@ If you develop/use TeaCache in your projects, welcome to let us know.
 - [TeaCache4Mochi](./TeaCache4Mochi/README.md)
 - [TeaCache4LTX-Video](./TeaCache4LTX-Video/README.md)
 - [TeaCache4CogVideoX1.5](./TeaCache4CogVideoX1.5/README.md)
+- EasyAnimate, see [here](https://github.com/aigc-apps/EasyAnimate).
 
  **Image to Video** 
 - [TeaCache4ConsisID](./TeaCache4ConsisID/README.md)
 - [TeaCache4CogVideoX1.5](./TeaCache4CogVideoX1.5/README.md)
 - Ruyi-Models. See [here](https://github.com/IamCreateAI/Ruyi-Models).
+- EasyAnimate, see [here](https://github.com/aigc-apps/EasyAnimate).
+
+ **Video to Video**
+- EasyAnimate, see [here](https://github.com/aigc-apps/EasyAnimate).
 
  **Text to Image**
 - [TeaCache4FLUX](./TeaCache4FLUX/README.md)
