@@ -64,6 +64,7 @@ We introduce Timestep Embedding Aware Cache (TeaCache), a training-free caching 
 
 ## 🔥 Latest News 
 - **If you like our project, please give us a star ⭐ on GitHub for the latest update.**
+- [2025/01/24] 🔥 Support [Cosmos](https://github.com/NVIDIA/Cosmos) for both T2V and I2V. Thanks [@zishen-ucap](https://github.com/zishen-ucap). 
 - [2025/01/20] 🔥 Support [CogVideoX1.5-5B](https://github.com/THUDM/CogVideo) for both T2V and I2V. Thanks [@zishen-ucap](https://github.com/zishen-ucap). 
 - [2025/01/07] 🔥 Support [TangoFlux](https://github.com/declare-lab/TangoFlux). TeaCache works well for Audio Diffusion Models!
 - [2024/12/30] 🔥 Support [Mochi](https://github.com/genmoai/mochi) and [LTX-Video](https://github.com/Lightricks/LTX-Video) for Video Diffusion Models. Support [Lumina-T2X](https://github.com/Alpha-VLLM/Lumina-T2X) for Image Diffusion Models.
@@ -97,18 +98,20 @@ If you develop/use TeaCache in your projects, welcome to let us know.
 - [TeaCache4Open-Sora](./eval/teacache/README.md)
 - [TeaCache4Open-Sora-Plan](./eval/teacache/README.md)
 - [TeaCache4Latte](./eval/teacache/README.md)
-- [TeaCache4CogVideoX](https://github.com/THUDM/CogVideo)
+- [TeaCache4CogVideoX](./eval/teacache/README.md)
 - [TeaCache4HunyuanVideo](./TeaCache4HunyuanVideo/README.md)
 - [TeaCache4Mochi](./TeaCache4Mochi/README.md)
 - [TeaCache4LTX-Video](./TeaCache4LTX-Video/README.md)
 - [TeaCache4CogVideoX1.5](./TeaCache4CogVideoX1.5/README.md)
 - EasyAnimate, see [here](https://github.com/aigc-apps/EasyAnimate).
+- [TeaCache4Cosmos](./eval/TeaCache4Cosmos/README.md)
 
  **Image to Video** 
 - [TeaCache4ConsisID](./TeaCache4ConsisID/README.md)
 - [TeaCache4CogVideoX1.5](./TeaCache4CogVideoX1.5/README.md)
 - Ruyi-Models. See [here](https://github.com/IamCreateAI/Ruyi-Models).
 - EasyAnimate, see [here](https://github.com/aigc-apps/EasyAnimate).
+- [TeaCache4Cosmos](./eval/TeaCache4Cosmos/README.md)
 
  **Video to Video**
 - EasyAnimate, see [here](https://github.com/aigc-apps/EasyAnimate).
@@ -127,12 +130,12 @@ If you develop/use TeaCache in your projects, welcome to let us know.
 
 ## 💐 Acknowledgement 
 
-This repository is built based on [VideoSys](https://github.com/NUS-HPC-AI-Lab/VideoSys), [Diffusers](https://github.com/huggingface/diffusers), [Open-Sora](https://github.com/hpcaitech/Open-Sora), [Open-Sora-Plan](https://github.com/PKU-YuanGroup/Open-Sora-Plan), [Latte](https://github.com/Vchitect/Latte), [CogVideoX](https://github.com/THUDM/CogVideo), [HunyuanVideo](https://github.com/Tencent/HunyuanVideo), [ConsisID](https://github.com/PKU-YuanGroup/ConsisID), [FLUX](https://github.com/black-forest-labs/flux), [Mochi](https://github.com/genmoai/mochi), [LTX-Video](https://github.com/Lightricks/LTX-Video), [Lumina-T2X](https://github.com/Alpha-VLLM/Lumina-T2X) and [TangoFlux](https://github.com/declare-lab/TangoFlux). Thanks for their contributions!
+This repository is built based on [VideoSys](https://github.com/NUS-HPC-AI-Lab/VideoSys), [Diffusers](https://github.com/huggingface/diffusers), [Open-Sora](https://github.com/hpcaitech/Open-Sora), [Open-Sora-Plan](https://github.com/PKU-YuanGroup/Open-Sora-Plan), [Latte](https://github.com/Vchitect/Latte), [CogVideoX](https://github.com/THUDM/CogVideo), [HunyuanVideo](https://github.com/Tencent/HunyuanVideo), [ConsisID](https://github.com/PKU-YuanGroup/ConsisID), [FLUX](https://github.com/black-forest-labs/flux), [Mochi](https://github.com/genmoai/mochi), [LTX-Video](https://github.com/Lightricks/LTX-Video), [Lumina-T2X](https://github.com/Alpha-VLLM/Lumina-T2X), [TangoFlux](https://github.com/declare-lab/TangoFlux) and [Cosmos](https://github.com/NVIDIA/Cosmos). Thanks for their contributions!
 
 ## 🔒 License 
 
 * The majority of this project is released under the Apache 2.0 license as found in the [LICENSE](./LICENSE) file.
-* For [VideoSys](https://github.com/NUS-HPC-AI-Lab/VideoSys), [Diffusers](https://github.com/huggingface/diffusers), [Open-Sora](https://github.com/hpcaitech/Open-Sora), [Open-Sora-Plan](https://github.com/PKU-YuanGroup/Open-Sora-Plan), [Latte](https://github.com/Vchitect/Latte), [CogVideoX](https://github.com/THUDM/CogVideo), [HunyuanVideo](https://github.com/Tencent/HunyuanVideo), [ConsisID](https://github.com/PKU-YuanGroup/ConsisID), [FLUX](https://github.com/black-forest-labs/flux), [Mochi](https://github.com/genmoai/mochi), [LTX-Video](https://github.com/Lightricks/LTX-Video), [Lumina-T2X](https://github.com/Alpha-VLLM/Lumina-T2X), and [TangoFlux](https://github.com/declare-lab/TangoFlux), please follow their LICENSE.
+* For [VideoSys](https://github.com/NUS-HPC-AI-Lab/VideoSys), [Diffusers](https://github.com/huggingface/diffusers), [Open-Sora](https://github.com/hpcaitech/Open-Sora), [Open-Sora-Plan](https://github.com/PKU-YuanGroup/Open-Sora-Plan), [Latte](https://github.com/Vchitect/Latte), [CogVideoX](https://github.com/THUDM/CogVideo), [HunyuanVideo](https://github.com/Tencent/HunyuanVideo), [ConsisID](https://github.com/PKU-YuanGroup/ConsisID), [FLUX](https://github.com/black-forest-labs/flux), [Mochi](https://github.com/genmoai/mochi), [LTX-Video](https://github.com/Lightricks/LTX-Video), [Lumina-T2X](https://github.com/Alpha-VLLM/Lumina-T2X), [TangoFlux](https://github.com/declare-lab/TangoFlux) and [Cosmos](https://github.com/NVIDIA/Cosmos), please follow their LICENSE.
 * The service is a research preview. Please contact us if you find any potential violations. (liufeng20@mails.ucas.ac.cn)
 
 ## 📖 Citation 
