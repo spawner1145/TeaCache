@@ -76,15 +76,20 @@ We introduce Timestep Embedding Aware Cache (TeaCache), a training-free caching 
 
 ## 🧩 Community Contributions  
 If you develop/use TeaCache in your projects, welcome to let us know.
+
+**Model**
 - [ConsisID](https://github.com/PKU-YuanGroup/ConsisID) supports TeaCache. Thanks [@SHYuanBest](https://github.com/SHYuanBest).
+- [Ruyi-Models](https://github.com/IamCreateAI/Ruyi-Models) supports TeaCache. Thanks [@cellzero](https://github.com/cellzero).
+- [EasyAnimate](https://github.com/aigc-apps/EasyAnimate) supports TeaCache. Thanks [@hkunzhe](https://github.com/hkunzhe) and [@bubbliiiing](https://github.com/bubbliiiing).
+
+**ComfyUI**
 - [ComfyUI-HunyuanVideoWrapper](https://github.com/kijai/ComfyUI-HunyuanVideoWrapper) supports TeaCache4HunyuanVideo. Thanks [@kijai](https://github.com/kijai), [ctf05](https://github.com/ctf05) and [DarioFT](https://github.com/DarioFT).
 - [ComfyUI-TeaCacheHunyuanVideo](https://github.com/facok/ComfyUI-TeaCacheHunyuanVideo) for TeaCache4HunyuanVideo. Thanks [@facok](https://github.com/facok).
 - [ComfyUI-TeaCache](https://github.com/welltop-cn/ComfyUI-TeaCache) for TeaCache. Thanks [@YunjieYu](https://github.com/YunjieYu).
 - [Comfyui_TTP_Toolset](https://github.com/TTPlanetPig/Comfyui_TTP_Toolset) supports TeaCache. Thanks [@TTPlanetPig](https://github.com/TTPlanetPig).
 - [ComfyUI_Patches_ll](https://github.com/lldacing/ComfyUI_Patches_ll) supports TeaCache. Thanks [@lldacing](https://github.com/lldacing).
-- [Ruyi-Models](https://github.com/IamCreateAI/Ruyi-Models) supports TeaCache. Thanks [@cellzero](https://github.com/cellzero).
 - [ComfyUI-TangoFlux](https://github.com/LucipherDev/ComfyUI-TangoFlux) supports TeaCache. Thanks [@LucipherDev](https://github.com/LucipherDev).
-- [EasyAnimate](https://github.com/aigc-apps/EasyAnimate) supports TeaCache. Thanks [@hkunzhe](https://github.com/hkunzhe) and [@bubbliiiing](https://github.com/bubbliiiing).
+
 
   
 ## 🎉 Supported Models 
