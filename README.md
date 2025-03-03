@@ -1,4 +1,4 @@
-# Timestep Embedding Tells: It's Time to Cache for Video Diffusion Model
+# [CVPR 2025] Timestep Embedding Tells: It's Time to Cache for Video Diffusion Model
 
 <div class="is-size-5 publication-authors", align="center",>
             <span class="author-block">
@@ -64,6 +64,7 @@ We introduce Timestep Embedding Aware Cache (TeaCache), a training-free caching 
 
 ## 🔥 Latest News 
 - **If you like our project, please give us a star ⭐ on GitHub for the latest update.**
+- [2025/02/27] 🎉 Accepted in CVPR 2025.
 - [2025/01/24] 🔥 Support [Cosmos](https://github.com/NVIDIA/Cosmos) for both T2V and I2V. Thanks [@zishen-ucap](https://github.com/zishen-ucap). 
 - [2025/01/20] 🔥 Support [CogVideoX1.5-5B](https://github.com/THUDM/CogVideo) for both T2V and I2V. Thanks [@zishen-ucap](https://github.com/zishen-ucap). 
 - [2025/01/07] 🔥 Support [TangoFlux](https://github.com/declare-lab/TangoFlux). TeaCache works well for Audio Diffusion Models!
