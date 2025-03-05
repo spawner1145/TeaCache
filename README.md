@@ -93,6 +93,9 @@ If you develop/use TeaCache in your projects, welcome to let us know.
 - [ComfyUI_Patches_ll](https://github.com/lldacing/ComfyUI_Patches_ll) supports TeaCache. Thanks [@lldacing](https://github.com/lldacing).
 - [ComfyUI-TangoFlux](https://github.com/LucipherDev/ComfyUI-TangoFlux) supports TeaCache. Thanks [@LucipherDev](https://github.com/LucipherDev).
 
+**Parallelism**
+- [Teacache-xDiT](https://github.com/MingXiangL/Teacache-xDiT) for multi-gpu inference. Thanks [@MingXiangL](https://github.com/MingXiangL).
+
 
   
 ## 🎉 Supported Models 
