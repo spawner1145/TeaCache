@@ -841,6 +841,7 @@ def generate(args):
 
         # TeaCache
         wan_t2v.__class__.generate = t2v_generate
+        wan_t2v.model.__class__.cnt = 0
         wan_t2v.model.__class__.enable_teacache = True
         wan_t2v.model.__class__.num_steps = args.sample_steps if args.sample_steps is not None else 50
         wan_t2v.model.__class__.rel_l1_thresh = args.teacache_thresh # 2min54s, 0.05: 1min 55s(1.5x), 0.1, 1min 24s(2.1x) 0.15, 1min 6s, 0.08: 1min 27s(2x), 0.07: 1min 48s(1.6x), 0.06: 1min 51s
@@ -914,6 +915,7 @@ def generate(args):
 
         # TeaCache
         wan_i2v.__class__.generate = i2v_generate
+        wan_i2v.model.__class__.cnt = 0
         wan_i2v.model.__class__.enable_teacache = True
         wan_i2v.model.__class__.num_steps = args.sample_steps if args.sample_steps is not None else 40
         wan_i2v.model.__class__.rel_l1_thresh = args.teacache_thresh # 12min 26s
