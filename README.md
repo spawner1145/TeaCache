@@ -100,6 +100,7 @@ If you develop/use TeaCache in your projects, welcome to let us know.
   
 ## 🎉 Supported Models 
 **Text to Video**
+- [TeaCache4Wan2.1](./TeaCache4Wan2.1/README.md)
 - [TeaCache4Open-Sora](./eval/teacache/README.md)
 - [TeaCache4Open-Sora-Plan](./eval/teacache/README.md)
 - [TeaCache4Latte](./eval/teacache/README.md)
@@ -110,15 +111,15 @@ If you develop/use TeaCache in your projects, welcome to let us know.
 - [TeaCache4CogVideoX1.5](./TeaCache4CogVideoX1.5/README.md)
 - EasyAnimate, see [here](https://github.com/aigc-apps/EasyAnimate).
 - [TeaCache4Cosmos](./eval/TeaCache4Cosmos/README.md)
-- [TeaCache4Wan2.1](./TeaCache4Wan2.1/README.md)
+
 
  **Image to Video** 
+ - [TeaCache4Wan2.1](./TeaCache4Wan2.1/README.md)
 - [TeaCache4ConsisID](./TeaCache4ConsisID/README.md)
 - [TeaCache4CogVideoX1.5](./TeaCache4CogVideoX1.5/README.md)
 - Ruyi-Models. See [here](https://github.com/IamCreateAI/Ruyi-Models).
 - EasyAnimate, see [here](https://github.com/aigc-apps/EasyAnimate).
 - [TeaCache4Cosmos](./eval/TeaCache4Cosmos/README.md)
-- [TeaCache4Wan2.1](./TeaCache4Wan2.1/README.md)
 
  **Video to Video**
 - EasyAnimate, see [here](https://github.com/aigc-apps/EasyAnimate).
