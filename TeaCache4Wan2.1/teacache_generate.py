@@ -879,7 +879,6 @@ def generate(args):
         wan_t2v.model.__class__.previous_residual_odd = None
         wan_t2v.model.__class__.use_ref_steps = args.use_ret_steps
         if args.use_ret_steps:
-            # wan_t2v.model.__class__.task = args.task
             if '1.3B' in args.ckpt_dir:
                 wan_t2v.model.__class__.coefficients = [-5.21862437e+04, 9.23041404e+03, -5.28275948e+02, 1.36987616e+01, -4.99875664e-02]
             if '14B' in args.ckpt_dir:
@@ -964,7 +963,6 @@ def generate(args):
         wan_i2v.model.__class__.previous_residual_odd = None
         wan_i2v.model.__class__.use_ref_steps = args.use_ret_steps
         if args.use_ret_steps:
-            # wan_i2v.model.__class__.task = args.task
             if '480P' in args.ckpt_dir:
                 wan_i2v.model.__class__.coefficients = [ 2.57151496e+05, -3.54229917e+04,  1.40286849e+03, -1.35890334e+01, 1.32517977e-01]
             if '720P' in args.ckpt_dir:
