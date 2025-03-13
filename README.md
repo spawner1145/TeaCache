@@ -64,6 +64,7 @@ We introduce Timestep Embedding Aware Cache (TeaCache), a training-free caching 
 
 ## 🔥 Latest News 
 - **If you like our project, please give us a star ⭐ on GitHub for the latest update.**
+- [2025/03/13] 🔥 Optimized TeaCache for [Wan2.1](https://github.com/Wan-Video/Wan2.1). Thanks [@zishen-ucap](https://github.com/zishen-ucap).
 - [2025/03/05] 🔥 Support [Wan2.1](https://github.com/Wan-Video/Wan2.1) for both T2V and I2V.
 - [2025/02/27] 🎉 Accepted in CVPR 2025.
 - [2025/01/24] 🔥 Support [Cosmos](https://github.com/NVIDIA/Cosmos) for both T2V and I2V. Thanks [@zishen-ucap](https://github.com/zishen-ucap). 
@@ -78,7 +79,7 @@ We introduce Timestep Embedding Aware Cache (TeaCache), a training-free caching 
 - [2024/11/28] 🎉 Release the [paper](https://arxiv.org/abs/2411.19108) of TeaCache.
 
 ## 🧩 Community Contributions  
-If you develop/use TeaCache in your projects, welcome to let us know.
+If you develop/use TeaCache in your projects and you would like more people to see it, please inform us.(liufeng20@mails.ucas.ac.cn)
 
 **Model**
 - [ConsisID](https://github.com/PKU-YuanGroup/ConsisID) supports TeaCache. Thanks [@SHYuanBest](https://github.com/SHYuanBest).
@@ -101,25 +102,28 @@ If you develop/use TeaCache in your projects, welcome to let us know.
 ## 🎉 Supported Models 
 **Text to Video**
 - [TeaCache4Wan2.1](./TeaCache4Wan2.1/README.md)
+- [TeaCache4Cosmos](./eval/TeaCache4Cosmos/README.md)
+- EasyAnimate, see [here](https://github.com/aigc-apps/EasyAnimate).
+- [TeaCache4CogVideoX1.5](./TeaCache4CogVideoX1.5/README.md)
+- [TeaCache4LTX-Video](./TeaCache4LTX-Video/README.md)
+- [TeaCache4Mochi](./TeaCache4Mochi/README.md)
+- [TeaCache4HunyuanVideo](./TeaCache4HunyuanVideo/README.md)
+- [TeaCache4CogVideoX](./eval/teacache/README.md)
 - [TeaCache4Open-Sora](./eval/teacache/README.md)
 - [TeaCache4Open-Sora-Plan](./eval/teacache/README.md)
 - [TeaCache4Latte](./eval/teacache/README.md)
-- [TeaCache4CogVideoX](./eval/teacache/README.md)
-- [TeaCache4HunyuanVideo](./TeaCache4HunyuanVideo/README.md)
-- [TeaCache4Mochi](./TeaCache4Mochi/README.md)
-- [TeaCache4LTX-Video](./TeaCache4LTX-Video/README.md)
-- [TeaCache4CogVideoX1.5](./TeaCache4CogVideoX1.5/README.md)
-- EasyAnimate, see [here](https://github.com/aigc-apps/EasyAnimate).
-- [TeaCache4Cosmos](./eval/TeaCache4Cosmos/README.md)
+
+
 
 
  **Image to Video** 
- - [TeaCache4Wan2.1](./TeaCache4Wan2.1/README.md)
-- [TeaCache4ConsisID](./TeaCache4ConsisID/README.md)
-- [TeaCache4CogVideoX1.5](./TeaCache4CogVideoX1.5/README.md)
-- Ruyi-Models. See [here](https://github.com/IamCreateAI/Ruyi-Models).
-- EasyAnimate, see [here](https://github.com/aigc-apps/EasyAnimate).
+- [TeaCache4Wan2.1](./TeaCache4Wan2.1/README.md)
 - [TeaCache4Cosmos](./eval/TeaCache4Cosmos/README.md)
+- EasyAnimate, see [here](https://github.com/aigc-apps/EasyAnimate).
+- Ruyi-Models. See [here](https://github.com/IamCreateAI/Ruyi-Models).
+- [TeaCache4CogVideoX1.5](./TeaCache4CogVideoX1.5/README.md)
+- [TeaCache4ConsisID](./TeaCache4ConsisID/README.md)
+
 
  **Video to Video**
 - EasyAnimate, see [here](https://github.com/aigc-apps/EasyAnimate).
