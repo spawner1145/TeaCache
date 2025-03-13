@@ -57,6 +57,49 @@ For I2V with 720P resolution, you can use the following command:
 python teacache_generate.py --task i2v-14B --size 1280*720 --ckpt_dir ./Wan2.1-I2V-14B-720P --image examples/i2v_input.JPG --prompt "Summer beach vacation style, a white cat wearing sunglasses sits on a surfboard. The fluffy-furred feline gazes directly at the camera with a relaxed expression. Blurred beach scenery forms the background featuring crystal-clear waters, distant green hills, and a blue sky dotted with white clouds. The cat assumes a naturally relaxed posture, as if savoring the sea breeze and warm sunlight. A close-up shot highlights the feline's intricate details and the refreshing atmosphere of the seaside." --base_seed 42 --offload_model True --t5_cpu --frame_num 61  --teacache_thresh 0.3
 ```
 
+## Faster Video Generation Using the `use_ret_steps` Parameter
+
+Using Retention Steps will result in faster generation speed and better generation quality (except for t2v-1.3B).
+
+https://github.com/user-attachments/assets/f241b5f5-1044-4223-b2a4-449dc6dc1ad7
+
+https://github.com/user-attachments/assets/01db60f9-4aaf-43c4-8f1b-6e050cfa1180
+
+https://github.com/user-attachments/assets/e03621f2-1085-4571-8eca-51889f47ce18
+
+https://github.com/user-attachments/assets/d1340197-20c1-4f9e-a780-31f789af0893
+
+
+|       use_ref_steps        |   Wan2.1 t2v 1.3B (thresh)   |     Slow (thresh)     |     Fast (thresh)     |
+|:--------------------------:|:----------------------------:|:---------------------:|:---------------------:|
+|          False             |        ~97 s (0.00)          |     ~64 s (0.05)      |     ~49 s (0.08)      |
+|          True              |        ~97 s (0.00)          |     ~61 s (0.05)      |     ~41 s (0.10)      |
+
+|       use_ref_steps        |   Wan2.1 t2v 14B (thresh)    |     Slow (thresh)     |     Fast (thresh)     |
+|:--------------------------:|:----------------------------:|:---------------------:|:---------------------:|
+|          False             |       ~1829 s (0.00)         |    ~1234 s (0.14)     |    ~909 s (0.20)      |
+|          True              |       ~1829 s (0.00)         |    ~915 s (0.10)      |    ~578 s (0.20)      |
+
+|       use_ref_steps        |   Wan2.1 i2v 480p (thresh)   |     Slow (thresh)     |     Fast (thresh)     |
+|:--------------------------:|:----------------------------:|:---------------------:|:---------------------:|
+|          False             |       ~385 s (0.00)          |    ~241 s (0.13)      |    ~156 s (0.26)      |
+|          True              |       ~385 s (0.00)          |    ~212 s (0.20)      |    ~164 s (0.30)      |
+
+|       use_ref_steps        |   Wan2.1 i2v 720p (thresh)   |     Slow (thresh)     |     Fast (thresh)     |
+|:--------------------------:|:----------------------------:|:---------------------:|:---------------------:|
+|          False             |       ~903 s (0.00)          |    ~476 s (0.20)      |    ~363 s (0.30)      |
+|          True              |       ~903 s (0.00)          |    ~430 s (0.20)      |    ~340 s (0.30)      |
+
+
+You can refer to the previous video generation instructions and use the `use_ret_steps` parameter to speed up the video generation process, achieving results closer to **Wan2.1**. Simply add the `--use_ret_steps` parameter to the original command and adjust the `--teacache_thresh` parameter to achieve more efficient video generation. The value of the `--teacache_thresh` parameter can be referenced from the table, allowing you to choose the appropriate value based on different models and settings.
+
+### Example Command:
+
+```bash
+python teacache_generate.py  --task t2v-14B --size 1280*720 --ckpt_dir ./Wan2.1-T2V-14B  --prompt "Two anthropomorphic cats in comfy boxing gear and bright gloves fight intensely on a spotlighted stage." --base_seed 42 --offload_model True --t5_cpu  --teacache_thresh 0.3 --use_ret_steps
+```
+
+
 ## Acknowledgements
 
 We would like to thank the contributors to the [Wan2.1](https://github.com/Wan-Video/Wan2.1).
