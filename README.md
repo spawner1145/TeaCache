@@ -100,7 +100,8 @@ If you develop/use TeaCache in your projects and you would like more people to s
 **Parallelism**
 - [Teacache-xDiT](https://github.com/MingXiangL/Teacache-xDiT) for multi-gpu inference. Thanks [@MingXiangL](https://github.com/MingXiangL).
 
-
+**Engine**
+- [DiffSynth Studio](https://github.com/modelscope/DiffSynth-Studio) supports TeaCache. Thanks [@Artiprocher](https://github.com/Artiprocher).
   
 ## 🎉 Supported Models 
 **Text to Video**
