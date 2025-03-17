@@ -5,7 +5,7 @@
               <a href="https://liewfeng.github.io" target="_blank">Feng Liu</a><sup>1</sup><sup>*</sup>,&nbsp;
             </span>
             <span class="author-block">
-              <a href="https://scholar.google.com.hk/citations?user=ZO3OQ-8AAAAJ" target="_blank">Shiwei Zhang</a><sup>2</sup>,&nbsp;
+              <a href="https://scholar.google.com.hk/citations?user=ZO3OQ-8AAAAJ" target="_blank">Shiwei Zhang</a><sup>2</sup><sup>†</sup>,&nbsp;
             </span>
             <span class="author-block">
               <a href="https://jeffwang987.github.io" target="_blank">Xiaofeng Wang</a><sup>1,3</sup>,&nbsp;
@@ -27,7 +27,7 @@
               <a href="https://scholar.google.com/citations?user=tjEfgsEAAAAJ&hl=en&oi=ao" target="_blank">Qixiang Ye</a><sup>1</sup>,&nbsp;
             </span>
             <span class="author-block">
-              <a href="https://scholar.google.com/citations?user=0IKavloAAAAJ&hl=en&oi=ao" target="_blank">Fang Wan</a><sup>1</sup><sup>†</sup>
+              <a href="https://scholar.google.com/citations?user=0IKavloAAAAJ&hl=en&oi=ao" target="_blank">Fang Wan</a><sup>1</sup><sup>‡</sup>
             </span>
           </div>
 
@@ -43,7 +43,7 @@
 
 
 <div class="is-size-5 publication-authors", align="center">
-            (* Work was done during internship at Alibaba Group. † Corresponding author.)
+            (* Work was done during internship at Alibaba Group. † Project Leader. ‡ CorresCorresponding author.)
           </div>
 
 <h5 align="center">
