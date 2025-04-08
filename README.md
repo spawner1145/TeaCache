@@ -64,7 +64,7 @@ We introduce Timestep Embedding Aware Cache (TeaCache), a training-free caching 
 
 ## 🔥 Latest News 
 - **If you like our project, please give us a star ⭐ on GitHub for the latest update.**
-- [2025/04/05] 🎉 Selected as a **highlight** in CVPR 2025, top 16.8% in accepted papers and top 3.7% in all papers.
+- [2025/04/05] 🎉 Recommended as a **highlight** in CVPR 2025, top 16.8% in accepted papers and top 3.7% in all papers.
 - [2025/03/13] 🔥 Optimized TeaCache for [Wan2.1](https://github.com/Wan-Video/Wan2.1). Thanks [@zishen-ucap](https://github.com/zishen-ucap).
 - [2025/03/05] 🔥 Support [Wan2.1](https://github.com/Wan-Video/Wan2.1) for both T2V and I2V.
 - [2025/02/27] 🎉 Accepted in **CVPR 2025**.
