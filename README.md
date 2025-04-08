@@ -1,4 +1,4 @@
-# [CVPR 2025] Timestep Embedding Tells: It's Time to Cache for Video Diffusion Model
+# [CVPR 2025 Highlight] Timestep Embedding Tells: It's Time to Cache for Video Diffusion Model
 
 <div class="is-size-5 publication-authors", align="center",>
             <span class="author-block">
@@ -64,9 +64,10 @@ We introduce Timestep Embedding Aware Cache (TeaCache), a training-free caching 
 
 ## 🔥 Latest News 
 - **If you like our project, please give us a star ⭐ on GitHub for the latest update.**
+- [2025/04/05] 🎉 TeaCache is selected as a **highlight**, top 16.8% in accepted papers and top 3.7% in all papers.
 - [2025/03/13] 🔥 Optimized TeaCache for [Wan2.1](https://github.com/Wan-Video/Wan2.1). Thanks [@zishen-ucap](https://github.com/zishen-ucap).
 - [2025/03/05] 🔥 Support [Wan2.1](https://github.com/Wan-Video/Wan2.1) for both T2V and I2V.
-- [2025/02/27] 🎉 Accepted in CVPR 2025.
+- [2025/02/27] 🎉 Accepted in **CVPR 2025**.
 - [2025/01/24] 🔥 Support [Cosmos](https://github.com/NVIDIA/Cosmos) for both T2V and I2V. Thanks [@zishen-ucap](https://github.com/zishen-ucap). 
 - [2025/01/20] 🔥 Support [CogVideoX1.5-5B](https://github.com/THUDM/CogVideo) for both T2V and I2V. Thanks [@zishen-ucap](https://github.com/zishen-ucap). 
 - [2025/01/07] 🔥 Support [TangoFlux](https://github.com/declare-lab/TangoFlux). TeaCache works well for Audio Diffusion Models!
@@ -88,11 +89,11 @@ If you develop/use TeaCache in your projects and you would like more people to s
 - [ConsisID](https://github.com/PKU-YuanGroup/ConsisID) supports TeaCache. Thanks [@SHYuanBest](https://github.com/SHYuanBest).
 
 **ComfyUI**
+- [ComfyUI-TeaCache](https://github.com/welltop-cn/ComfyUI-TeaCache) for TeaCache. Thanks [@YunjieYu](https://github.com/YunjieYu).
 - [ComfyUI-WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper) supports TeaCache4Wan2.1. Thanks [@kijai](https://github.com/kijai).
 - [ComfyUI-TangoFlux](https://github.com/LucipherDev/ComfyUI-TangoFlux) supports TeaCache. Thanks [@LucipherDev](https://github.com/LucipherDev).
 - [ComfyUI_Patches_ll](https://github.com/lldacing/ComfyUI_Patches_ll) supports TeaCache. Thanks [@lldacing](https://github.com/lldacing).
 - [Comfyui_TTP_Toolset](https://github.com/TTPlanetPig/Comfyui_TTP_Toolset) supports TeaCache. Thanks [@TTPlanetPig](https://github.com/TTPlanetPig).
-- [ComfyUI-TeaCache](https://github.com/welltop-cn/ComfyUI-TeaCache) for TeaCache. Thanks [@YunjieYu](https://github.com/YunjieYu).
 - [ComfyUI-TeaCacheHunyuanVideo](https://github.com/facok/ComfyUI-TeaCacheHunyuanVideo) for TeaCache4HunyuanVideo. Thanks [@facok](https://github.com/facok).
 - [ComfyUI-HunyuanVideoWrapper](https://github.com/kijai/ComfyUI-HunyuanVideoWrapper) supports TeaCache4HunyuanVideo. Thanks [@kijai](https://github.com/kijai), [ctf05](https://github.com/ctf05) and [DarioFT](https://github.com/DarioFT).
 
@@ -101,6 +102,7 @@ If you develop/use TeaCache in your projects and you would like more people to s
 - [Teacache-xDiT](https://github.com/MingXiangL/Teacache-xDiT) for multi-gpu inference. Thanks [@MingXiangL](https://github.com/MingXiangL).
 
 **Engine**
+- [SD.Next](https://github.com/vladmandic/sdnext) supports TeaCache. Thanks [@vladmandic](https://github.com/vladmandic).
 - [DiffSynth Studio](https://github.com/modelscope/DiffSynth-Studio) supports TeaCache. Thanks [@Artiprocher](https://github.com/Artiprocher).
   
 ## 🎉 Supported Models 
