@@ -6,6 +6,14 @@ from diffusers.models.modeling_outputs import Transformer2DModelOutput
 from diffusers.utils import USE_PEFT_BACKEND, is_torch_version, scale_lora_layers, unscale_lora_layers, export_to_video, load_image
 from diffusers import CogVideoXPipeline, CogVideoXImageToVideoPipeline
 
+coefficients_dict = {
+    "CogVideoX-2b":[-3.10658903e+01,  2.54732368e+01, -5.92380459e+00,  1.75769064e+00, -3.61568434e-03],
+    "CogVideoX-5b":[-1.53880483e+03,  8.43202495e+02, -1.34363087e+02,  7.97131516e+00, -5.23162339e-02],
+    "CogVideoX-5b-I2V":[-1.53880483e+03,  8.43202495e+02, -1.34363087e+02,  7.97131516e+00, -5.23162339e-02],
+    "CogVideoX1.5-5B":[ 2.50210439e+02, -1.65061612e+02,  3.57804877e+01, -7.81551492e-01, 3.58559703e-02],
+    "CogVideoX1.5-5B-I2V":[ 1.22842302e+02, -1.04088754e+02,  2.62981677e+01, -3.06009921e-01, 3.71213220e-02],
+}
+
 
 def teacache_forward(
         self,
@@ -64,13 +72,7 @@ def teacache_forward(
                 should_calc = True
                 self.accumulated_rel_l1_distance = 0
             else: 
-                if not self.config.use_rotary_positional_embeddings:
-                    # CogVideoX-2B
-                    coefficients = [-3.10658903e+01,  2.54732368e+01, -5.92380459e+00,  1.75769064e+00, -3.61568434e-03]   
-                else:
-                    # CogVideoX-5B and CogvideoX1.5-5B
-                    coefficients = [-1.53880483e+03,  8.43202495e+02, -1.34363087e+02,  7.97131516e+00, -5.23162339e-02]
-                rescale_func = np.poly1d(coefficients)
+                rescale_func = np.poly1d(self.coefficients)
                 self.accumulated_rel_l1_distance += rescale_func(((emb-self.previous_modulated_input).abs().mean() / self.previous_modulated_input.abs().mean()).cpu().item())
                 if self.accumulated_rel_l1_distance < self.rel_l1_thresh:
                     should_calc = False
@@ -196,6 +198,7 @@ def main(args):
     guidance_scale = args.guidance_scale
     fps = args.fps
     image_path = args.image_path
+    mode = ckpts_path.split("/")[-1]
 
     if generate_type == "t2v":
         pipe = CogVideoXPipeline.from_pretrained(ckpts_path, torch_dtype=torch.bfloat16)
@@ -212,6 +215,7 @@ def main(args):
     pipe.transformer.__class__.previous_residual_encoder = None
     pipe.transformer.__class__.num_steps = num_inference_steps
     pipe.transformer.__class__.cnt = 0
+    pipe.transformer.__class__.coefficients = coefficients_dict[mode]
     pipe.transformer.__class__.forward = teacache_forward
 
     pipe.to("cuda")
@@ -243,7 +247,7 @@ def main(args):
             generator=torch.Generator("cuda").manual_seed(seed),  # Set the seed for reproducibility
         ).frames[0]
     words = prompt.split()[:5]
-    video_path = f"{output_path}/teacache_cogvideox1.5-5B_{words}.mp4"
+    video_path = f"{output_path}/teacache_cogvideox1.5-5B_{words}_{rel_l1_thresh}.mp4"
     export_to_video(video, video_path, fps=fps)
 
 
@@ -263,7 +267,7 @@ if __name__ == "__main__":
     parser.add_argument("--height", type=int, default=768, help="Number of steps for the inference process")
     parser.add_argument("--num_frames", type=int, default=81, help="Number of steps for the inference process")
     parser.add_argument("--guidance_scale", type=float, default=6.0, help="The scale for classifier-free guidance")
-    parser.add_argument("--fps", type=int, default=16, help="Number of steps for the inference process")
+    parser.add_argument("--fps", type=int, default=16, help="Frame rate of video")
     args = parser.parse_args()
 
     main(args)
