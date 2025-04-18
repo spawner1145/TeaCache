@@ -84,6 +84,7 @@ We introduce Timestep Embedding Aware Cache (TeaCache), a training-free caching 
 If you develop/use TeaCache in your projects and you would like more people to see it, please inform us.(liufeng20@mails.ucas.ac.cn)
 
 **Model**
+- [FramePack](https://github.com/lllyasviel/FramePack) supports TeaCache. Thanks [@lllyasviel](https://github.com/lllyasviel).
 - [FastVideo](https://github.com/hao-ai-lab/FastVideo) supports TeaCache. Thanks [@BrianChen1129](https://github.com/BrianChen1129) and [@jzhang38](https://github.com/jzhang38).
 - [EasyAnimate](https://github.com/aigc-apps/EasyAnimate) supports TeaCache. Thanks [@hkunzhe](https://github.com/hkunzhe) and [@bubbliiiing](https://github.com/bubbliiiing).
 - [Ruyi-Models](https://github.com/IamCreateAI/Ruyi-Models) supports TeaCache. Thanks [@cellzero](https://github.com/cellzero).
