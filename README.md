@@ -64,6 +64,7 @@ We introduce Timestep Embedding Aware Cache (TeaCache), a training-free caching 
 
 ## 🔥 Latest News 
 - **If you like our project, please give us a star ⭐ on GitHub for the latest update.**
+- [2025/05/26] 🔥 Support [Lumina-Image-2.0](https://github.com/Alpha-VLLM/Lumina-Image-2.0). Thanks [@spawner1145](https://github.com/spawner1145). 
 - [2025/05/25] 🔥 Support [HiDream-I1](https://github.com/HiDream-ai/HiDream-I1). Thanks [@YunjieYu](https://github.com/YunjieYu). 
 - [2025/04/14] 🔥 Update coefficients of CogVideoX1.5. Thanks [@zishen-ucap](https://github.com/zishen-ucap).
 - [2025/04/05] 🎉 Recommended as a **highlight** in CVPR 2025, top 16.8% in accepted papers and top 3.7% in all papers.
@@ -138,6 +139,7 @@ If you develop/use TeaCache in your projects and you would like more people to s
 - EasyAnimate, see [here](https://github.com/aigc-apps/EasyAnimate).
 
  **Text to Image**
+- [TeaCache4Lumina2](./TeaCache4Lumina2/README.md)
 - [TeaCache4HiDream-I1](./TeaCache4HiDream-I1/README.md)
 - [TeaCache4FLUX](./TeaCache4FLUX/README.md)
 - [TeaCache4Lumina-T2X](./TeaCache4Lumina-T2X/README.md)
@@ -152,12 +154,12 @@ If you develop/use TeaCache in your projects and you would like more people to s
 
 ## 💐 Acknowledgement 
 
-This repository is built based on [VideoSys](https://github.com/NUS-HPC-AI-Lab/VideoSys), [Diffusers](https://github.com/huggingface/diffusers), [Open-Sora](https://github.com/hpcaitech/Open-Sora), [Open-Sora-Plan](https://github.com/PKU-YuanGroup/Open-Sora-Plan), [Latte](https://github.com/Vchitect/Latte), [CogVideoX](https://github.com/THUDM/CogVideo), [HunyuanVideo](https://github.com/Tencent/HunyuanVideo), [ConsisID](https://github.com/PKU-YuanGroup/ConsisID), [FLUX](https://github.com/black-forest-labs/flux), [Mochi](https://github.com/genmoai/mochi), [LTX-Video](https://github.com/Lightricks/LTX-Video), [Lumina-T2X](https://github.com/Alpha-VLLM/Lumina-T2X), [TangoFlux](https://github.com/declare-lab/TangoFlux), [Cosmos](https://github.com/NVIDIA/Cosmos), [Wan2.1](https://github.com/Wan-Video/Wan2.1) and [HiDream-I1](https://github.com/HiDream-ai/HiDream-I1). Thanks for their contributions!
+This repository is built based on [VideoSys](https://github.com/NUS-HPC-AI-Lab/VideoSys), [Diffusers](https://github.com/huggingface/diffusers), [Open-Sora](https://github.com/hpcaitech/Open-Sora), [Open-Sora-Plan](https://github.com/PKU-YuanGroup/Open-Sora-Plan), [Latte](https://github.com/Vchitect/Latte), [CogVideoX](https://github.com/THUDM/CogVideo), [HunyuanVideo](https://github.com/Tencent/HunyuanVideo), [ConsisID](https://github.com/PKU-YuanGroup/ConsisID), [FLUX](https://github.com/black-forest-labs/flux), [Mochi](https://github.com/genmoai/mochi), [LTX-Video](https://github.com/Lightricks/LTX-Video), [Lumina-T2X](https://github.com/Alpha-VLLM/Lumina-T2X), [TangoFlux](https://github.com/declare-lab/TangoFlux), [Cosmos](https://github.com/NVIDIA/Cosmos), [Wan2.1](https://github.com/Wan-Video/Wan2.1), [HiDream-I1](https://github.com/HiDream-ai/HiDream-I1) and [Lumina-Image-2.0](https://github.com/Alpha-VLLM/Lumina-Image-2.0). Thanks for their contributions!
 
 ## 🔒 License 
 
 * The majority of this project is released under the Apache 2.0 license as found in the [LICENSE](./LICENSE) file.
-* For [VideoSys](https://github.com/NUS-HPC-AI-Lab/VideoSys), [Diffusers](https://github.com/huggingface/diffusers), [Open-Sora](https://github.com/hpcaitech/Open-Sora), [Open-Sora-Plan](https://github.com/PKU-YuanGroup/Open-Sora-Plan), [Latte](https://github.com/Vchitect/Latte), [CogVideoX](https://github.com/THUDM/CogVideo), [HunyuanVideo](https://github.com/Tencent/HunyuanVideo), [ConsisID](https://github.com/PKU-YuanGroup/ConsisID), [FLUX](https://github.com/black-forest-labs/flux), [Mochi](https://github.com/genmoai/mochi), [LTX-Video](https://github.com/Lightricks/LTX-Video), [Lumina-T2X](https://github.com/Alpha-VLLM/Lumina-T2X), [TangoFlux](https://github.com/declare-lab/TangoFlux), [Cosmos](https://github.com/NVIDIA/Cosmos), [Wan2.1](https://github.com/Wan-Video/Wan2.1) and [HiDream-I1](https://github.com/HiDream-ai/HiDream-I1), please follow their LICENSE.
+* For [VideoSys](https://github.com/NUS-HPC-AI-Lab/VideoSys), [Diffusers](https://github.com/huggingface/diffusers), [Open-Sora](https://github.com/hpcaitech/Open-Sora), [Open-Sora-Plan](https://github.com/PKU-YuanGroup/Open-Sora-Plan), [Latte](https://github.com/Vchitect/Latte), [CogVideoX](https://github.com/THUDM/CogVideo), [HunyuanVideo](https://github.com/Tencent/HunyuanVideo), [ConsisID](https://github.com/PKU-YuanGroup/ConsisID), [FLUX](https://github.com/black-forest-labs/flux), [Mochi](https://github.com/genmoai/mochi), [LTX-Video](https://github.com/Lightricks/LTX-Video), [Lumina-T2X](https://github.com/Alpha-VLLM/Lumina-T2X), [TangoFlux](https://github.com/declare-lab/TangoFlux), [Cosmos](https://github.com/NVIDIA/Cosmos), [Wan2.1](https://github.com/Wan-Video/Wan2.1), [HiDream-I1](https://github.com/HiDream-ai/HiDream-I1) and [Lumina-Image-2.0](https://github.com/Alpha-VLLM/Lumina-Image-2.0), please follow their LICENSE.
 * The service is a research preview. Please contact us if you find any potential violations. (liufeng20@mails.ucas.ac.cn)
 
 ## 📖 Citation 
