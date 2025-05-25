@@ -26,7 +26,7 @@ pip install flash-attn --no-build-isolation
 
 ## Usage
 
-You can modify the thresh in line 113 to obtain your desired trade-off between latency and visul quality. For single-gpu inference, you can use the following command:
+You can modify the thresh in line 154 to obtain your desired trade-off between latency and visul quality. For single-gpu inference, you can use the following command:
 
 ```bash
 python teacache_lumina2.py
