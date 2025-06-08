@@ -114,7 +114,6 @@ If you develop/use TeaCache in your projects and you would like more people to s
 **Text to Video**
 - [TeaCache4Wan2.1](./TeaCache4Wan2.1/README.md)
 - [TeaCache4Cosmos](./eval/TeaCache4Cosmos/README.md)
-- EasyAnimate, see [here](https://github.com/aigc-apps/EasyAnimate).
 - [TeaCache4CogVideoX1.5](./TeaCache4CogVideoX1.5/README.md)
 - [TeaCache4LTX-Video](./TeaCache4LTX-Video/README.md)
 - [TeaCache4Mochi](./TeaCache4Mochi/README.md)
