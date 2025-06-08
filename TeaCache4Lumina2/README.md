@@ -3,6 +3,12 @@
 
 [TeaCache](https://github.com/LiewFeng/TeaCache) can speedup [Lumina-Image-2.0](https://github.com/Alpha-VLLM/Lumina-Image-2.0) without much visual quality degradation, in a training-free manner. The following image shows the experimental results of Lumina-Image-2.0 and TeaCache with different versions: Lumina-Image-2.0 (~25 s), TeaCache (0.2) (~16.7 s, 1.5x speedup), TeaCache (0.3) (~15.6 s, 1.6x speedup), TeaCache (0.5) (~13.79 s, 1.8x speedup), TeaCache (1.1) (~11.9 s, 2.1x speedup).
 
+The original coefficients 
+`[393.76566581,−603.50993606,209.10239044,−23.00726601,0.86377344]`
+ exhibit poor quality at low L1 values but perform better with higher L1 settings, though at a slower speed. The new coefficients 
+`[225.7042019806413,−608.8453716535591,304.1869942338369,124.21267720116742,−1.4089066892956552]`
+, however, offer faster computation and better quality at low L1 levels but incur significant feature loss at high L1 values.
+
 <p align="center">
     <img src="https://github.com/user-attachments/assets/aea9907b-830e-497b-b968-aaeef463c7ef" width="150" style="margin: 5px;">
     <img src="https://github.com/user-attachments/assets/0e258295-eaaa-49ce-b16f-bba7f7ada6c1" width="150" style="margin: 5px;">
