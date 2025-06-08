@@ -9,6 +9,8 @@ The v1 coefficients
 `[225.7042019806413,−608.8453716535591,304.1869942338369,124.21267720116742,−1.4089066892956552]`
 , however, offer faster computation and better quality at low L1 levels but incur significant feature loss at high L1 values.
 
+You can change the value in line 72 to switch versions
+
 ## v1
 <p align="center">
     <img src="https://github.com/user-attachments/assets/d2c87b99-e4ac-4407-809a-caf9750f41ef" width="150" style="margin: 5px;">
